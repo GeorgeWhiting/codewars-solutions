@@ -8,7 +8,6 @@ def longest_slide_down(pyramid)
   end
   pyramid[0][0]
 end
-
 def max (a,b)
   a>b ? a : b
 end
