@@ -1,0 +1,17 @@
+def solution(roman)
+  roman.downcase!
+  roman.gsub!('iv','4 ')
+  roman.gsub!('ix','9 ')
+  roman.gsub!('xl','40 ')
+  roman.gsub!('xc','90 ')
+  roman.gsub!('cd','400 ')
+  roman.gsub!('cm','900 ')
+  roman.gsub!('i','1 ')
+  roman.gsub!('v','5 ')
+  roman.gsub!('x','10 ')
+  roman.gsub!('l','50 ')
+  roman.gsub!('c','100 ')
+  roman.gsub!('d','500 ')
+  roman.gsub!('m','1000 ')
+  roman.split(' ').map(&:to_i).reduce(0, :+)
+end
